@@ -252,11 +252,12 @@ module.exports = function (grunt) {
             'img/**/*',
             'fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
-            '!**/_*{,/**}'
+            '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
             //'_bower_components/jquery/jquery.js',
             //'favicon.ico',
             //'apple-touch*.png'
+            'CNAME'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -290,9 +291,10 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
-          branch: 'gh-pages',
+          remote: 'git@github.com:DSteinmann/DSteinmann.github.io.git',
+          branch: 'master',
           commit: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
           push: true
         }
       }
