@@ -6,33 +6,34 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- build:css({app,.tmp}) /css/main.css -->
+        <!-- build:css({app,.tmp}) /css/application.css -->
+        <link rel="stylesheet" href="/css/application.css">
         <!-- Syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
         <!-- endbuild -->
+
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../_bower_components/components-font-awesome/css/font-awesome.css" />
+        <!-- endbower -->
 
     </head>
     <body>
 
         <div class="site">
           <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">Home</a>
-            <a class="extra" href="/">About</a>
+            <h1 class="header__title"><a href="/">{{ site.name }}</a></h1>
+            <a class="header__extra" href="/">Home</a>
+            <a class="header__extra" href="/">About</a>
           </div>
 
           {{ content }}
 
           <div class="footer">
-            <div class="contact">
-              <p>
-                Dominik Steinmann<br />
-                <a href="mailto:dominik@steinmann.io">dominik@steinmann.io</a>
-              </p>
-            </div>
+            <h3 class="footer__text">Contact me:</h3>
+            <ul class="footer__contact">
+              <li class="footer__link"><a class="fa fa-github" href="https://github.com/DSteinmann"></a></li>
+            </ul>
             <div class="contact">
               <p>
                 <a href="https://github.com/DSteinmann">github.com/DSteinmann</a><br />
@@ -45,5 +46,7 @@
     <!-- build:js(app) /js/scripts.js -->
     <script src="/js/main.js"></script>
     <!-- endbuild -->
+    <!-- bower:js -->
+    <!-- endbower -->
     </body>
 </html>

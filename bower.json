@@ -2,5 +2,6 @@
   "name": "dsteinmanngithubio",
   "version": "0.0.0",
   "dependencies": {
+    "components-font-awesome": "~4.4.0"
   }
 }

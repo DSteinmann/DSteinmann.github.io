@@ -1,0 +1,20 @@
+.header{
+  &__title{
+      display: inline-block;
+      margin-bottom: 2rem;
+      @include adjust-font-size-to(32px);
+  }
+
+  &__extra{
+    color: #111;
+    margin-left: 1rem;
+
+    &:hover{
+      color: #000;
+    }
+  }
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
