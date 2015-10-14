@@ -13,7 +13,6 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // Load all Grunt tasks
   require('load-grunt-tasks')(grunt);
-  grunt.loadNpmTasks('grunt-wiredep');
 
   grunt.initConfig({
     // Configurable paths
@@ -259,6 +258,7 @@ module.exports = function (grunt) {
             // Explicitly add any files your site needs for distribution here.
             '_bower_components/css/font-awesome.min.css',
             '_bower_components/fonts/*',
+            '_bower_components/trianglify/dist/trianglify.min.js',
             //'favicon.ico',
             //'apple-touch*.png'
             'CNAME'
@@ -335,26 +335,7 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:dist'
       ]
-    },
-    wiredep: {
-
-  task: {
-
-    // Point to the files that should be updated when
-    // you run `grunt wiredep`
-    src: [
-      'app/_layouts/default.html',   
-      'app/_scss/**/*.scss',  // .scss & .sass support...
-    ],
-
-    options: {
-      // See wiredep's configuration documentation for the options
-      // you may pass:
-
-      // https://github.com/taptapship/wiredep#configuration
     }
-  }
-}
   });
 
   // Define Tasks
