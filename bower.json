@@ -2,6 +2,7 @@
   "name": "dsteinmanngithubio",
   "version": "0.0.0",
   "dependencies": {
-    "components-font-awesome": "~4.4.0"
+    "components-font-awesome": "~4.4.0",
+    "trianglify": "~0.3.1"
   }
 }
