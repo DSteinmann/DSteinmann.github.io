@@ -1,0 +1,115 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: 20px;
+
+$base-line-height: 22px;
+$rhythm-unit: rem;
+
+@include establish-baseline();
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+body{
+  background-color: white;
+}
+
+p{
+  @include rhythm();
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Roboto', sans-serif;
+  @include rhythm();
+}
+h1,.alpha{
+  @include adjust-font-size-to(24px);
+}
+
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  width: 70%;
+  margin: 0 auto;
+  @include rhythm();
+}
+.content, .contact{
+  flex: 1 100%;
+}
+.posts {
+  list-style-type: none;
+  li{
+    @include rhythm();
+  }
+}
+
+
+.posts span {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+.meta {
+  color: #aaa;
+}
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+/* standard */
+.post pre {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .4rem;
+}
+
+.post ul, .post ol {
+  margin-left: 1.35rem;
+}
+
+.post code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .2rem;
+}
+
+.post pre code {
+  border: none;
+}
+
+/* terminal */
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+.post pre.terminal code {
+  background-color: #333;
+}
+
+
+/*****************************************************************************/
+/*
+/* Modules
+/*
+/*****************************************************************************/
+@import "modules/header";
+@import "modules/about";

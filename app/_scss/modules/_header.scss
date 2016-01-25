@@ -1,0 +1,31 @@
+.header{
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 20vh;
+  width: 100%;
+  overflow: hidden;
+  background: #99C8DF;
+  &__canvas{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+  }
+  &__title{
+    position: relative;
+    display: flex;
+    margin: auto;
+    @include adjust-font-size-to(26px);
+    font-weight: 300;
+    a{
+      text-decoration: none;
+      cursor: pointer;
+      &:visited{
+        color: inherit;
+      }
+    }
+  }
+}

@@ -107,14 +107,16 @@ module.exports = function (grunt) {
     compass: {
       options: {
         // If you're using global Sass gems, require them here.
-        // require: ['singularity', 'jacket'],
+        // require: 'font-awesome-sass',
         bundleExec: true,
         sassDir: '<%= yeoman.app %>/_scss',
         cssDir: '.tmp/css',
         imagesDir: '<%= yeoman.app %>/img',
         javascriptsDir: '<%= yeoman.app %>/js',
+        fontsDir: '<%= yeoman.app %>/fonts',
         relativeAssets: false,
         httpImagesPath: '/img',
+        httpFontsDir: '/fonts',
         httpGeneratedImagesPath: '/img/generated',
         outputStyle: 'expanded',
         raw: 'extensions_dir = "<%= yeoman.app %>/_bower_components"\n'
@@ -254,7 +256,9 @@ module.exports = function (grunt) {
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
-            //'_bower_components/jquery/jquery.js',
+            '_bower_components/css/font-awesome.min.css',
+            '_bower_components/fonts/*',
+            '_bower_components/trianglify/dist/trianglify.min.js',
             //'favicon.ico',
             //'apple-touch*.png'
             'CNAME'
@@ -316,8 +320,7 @@ module.exports = function (grunt) {
       },
       check: {
         src: [
-          '<%= yeoman.app %>/css/**/*.css',
-          '<%= yeoman.app %>/_scss/**/*.scss'
+          '<%= yeoman.app %>/css/**/*.css'
         ]
       }
     },
