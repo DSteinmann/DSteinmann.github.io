@@ -9,6 +9,7 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~3.0.3",
+    "grunt-browser-sync": "^2.2.0",
     "grunt-build-control": "~0.6.2",
     "grunt-concurrent": "~2.1.0",
     "grunt-contrib-clean": "~0.7.0",

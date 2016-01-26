@@ -8,7 +8,7 @@
 //   images: img
 //   fonts: fonts
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
   // Load all Grunt tasks
@@ -46,6 +46,20 @@ module.exports = function (grunt) {
           '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
           '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
+      }
+    },
+    browserSync: {
+      files: ["*.html", "*.css", "*.js"],
+      options: {
+        watchTask: false,
+        server: {
+          baseDir: [
+          ".jekyll",
+            ".tmp",
+            "<%= yeoman.app %>"
+          ],
+          directory: true
+        }
       }
     },
     connect: {
@@ -338,7 +352,7 @@ module.exports = function (grunt) {
   });
 
   // Define Tasks
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask('serve', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
@@ -347,21 +361,21 @@ module.exports = function (grunt) {
       'clean:server',
       'concurrent:server',
       'autoprefixer:server',
-      'connect:livereload',
+      'browserSync',
       'watch'
     ]);
   });
 
-  grunt.registerTask('server', function () {
+  grunt.registerTask('server', function() {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });
 
   // No real tests yet. Add your own.
   grunt.registerTask('test', [
-  //   'clean:server',
-  //   'concurrent:test',
-  //   'connect:test'
+    //   'clean:server',
+    //   'concurrent:test',
+    //   'connect:test'
   ]);
 
   grunt.registerTask('check', [
@@ -387,18 +401,20 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
-    ]);
+  ]);
 
   grunt.registerTask('deploy', [
     'check',
     'test',
     'build',
     'buildcontrol'
-    ]);
+  ]);
 
   grunt.registerTask('default', [
     'check',
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-browser-sync');
 };
