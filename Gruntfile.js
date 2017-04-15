@@ -51,7 +51,7 @@ module.exports = function(grunt) {
     browserSync: {
       files: ["*.html", "*.css", "*.js"],
       options: {
-        watchTask: false,
+        watchTask: true,
         server: {
           baseDir: [
           ".jekyll",
