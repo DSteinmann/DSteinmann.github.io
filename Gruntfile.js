@@ -313,7 +313,8 @@ module.exports = function(grunt) {
           branch: 'master',
           commit: true,
           message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
-          push: true
+          push: true,
+          force: true
         }
       }
     },
