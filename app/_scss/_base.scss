@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6{
   @include rhythm();
 }
 h1,.alpha{
-  @include adjust-font-size-to(36px);
+  @include adjust-font-size-to(48px);
 }
 
 .container{
@@ -67,6 +67,7 @@ h1,.alpha{
 
 .content{
   color: #333;
+  text-align: center;
   @include rhythm();
 }
 
