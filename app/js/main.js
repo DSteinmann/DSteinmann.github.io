@@ -11,10 +11,10 @@ WebFontConfig = {
   s.parentNode.insertBefore(wf, s);
 
   /* Trianglify */
-  var pattern = Trianglify({
+  var pattern = new Trianglify({
     width: window.innerWidth,
     height: window.innerHeight
-  })
+  });
   pattern.canvas(document.getElementById('triangles'));
 })();
 
