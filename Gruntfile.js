@@ -270,8 +270,8 @@ module.exports = function(grunt) {
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
-            '_bower_components/css/font-awesome.min.css',
-            '_bower_components/fonts/*',
+            '_bower_components/components-font-awesome/css/font-awesome.min.css',
+            '_bower_components/components-font-awesome/fonts/*',
             '_bower_components/trianglify/dist/trianglify.min.js',
             //'favicon.ico',
             //'apple-touch*.png'
@@ -313,8 +313,7 @@ module.exports = function(grunt) {
           branch: 'master',
           commit: true,
           message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
-          push: true,
-          force: true
+          push: true
         }
       }
     },
