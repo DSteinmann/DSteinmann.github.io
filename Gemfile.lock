@@ -17,6 +17,8 @@ GEM
       sass (>= 3.2, < 3.5)
     ffi (1.9.10)
     ffi (1.9.10-x64-mingw32)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     jekyll (3.1.0)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
@@ -50,6 +52,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass (>= 0.12)
+  font-awesome-sass
   jekyll (~> 3.1.0)
   kramdown
   rouge

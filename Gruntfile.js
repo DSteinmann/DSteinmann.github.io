@@ -121,7 +121,7 @@ module.exports = function(grunt) {
     compass: {
       options: {
         // If you're using global Sass gems, require them here.
-        // require: 'font-awesome-sass',
+        require: 'font-awesome-sass',
         bundleExec: true,
         sassDir: '<%= yeoman.app %>/_scss',
         cssDir: '.tmp/css',
@@ -270,9 +270,7 @@ module.exports = function(grunt) {
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
-            '_bower_components/components-font-awesome/css/font-awesome.min.css',
             '_bower_components/components-font-awesome/fonts/*',
-            '_bower_components/trianglify/dist/trianglify.min.js',
             //'favicon.ico',
             //'apple-touch*.png'
             'CNAME'
